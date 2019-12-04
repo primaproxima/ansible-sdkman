@@ -43,16 +43,6 @@
   set_fact:
     sdkman_dir: '{{ sdkman_dir | default(sdkman_user_home_dir.stdout + "/.sdkman") }}'
 
-
-# Alpine Linux requires GLIBC
-- block:
-    - name: Install GLIBC for Alpine Linux
-      include_tasks: install_glibc_alpine.yml
-  become: yes
-  when: ansible_os_family == 'Alpine'
-  tags:
-    - sdkman_privilege
-
 - name: Check for SDKMAN installation
   stat:
     path: '{{ sdkman_dir }}/bin/sdkman-init.sh'
