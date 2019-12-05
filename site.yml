@@ -5,14 +5,13 @@
     sdkman_auto_answer: true
     sdkman_update: true
     sdkman_uninstall_packages:
-    - { candidate: groovy, version: 1.8.9 }
+#    - { candidate: gradle, version: '3.5' }
+#    - { candidate: maven, version: 3.5.0 }
     sdkman_install_packages:
-    - { candidate: java, version: 8u131 }
-    - { candidate: gradle, version: '3.5' }
-    - { candidate: gradle, version: 2.14.1 }
-    - { candidate: maven, version: 3.5.0 }
-    - { candidate: maven, version: 3.3.9 }
+    - { candidate: java, version: '11.0.5.hs-adpt' }
+#    - { candidate: gradle, version: '3.5' }
+#    - { candidate: maven, version: 3.5.0 }
     sdkman_defaults:
-      java: 8u131
-      gradle: '3.5'
-      maven: 3.3.9
+      java: 11.0.3.hs-adpt
+#      gradle: '3.5'
+#      maven: 3.3.9
